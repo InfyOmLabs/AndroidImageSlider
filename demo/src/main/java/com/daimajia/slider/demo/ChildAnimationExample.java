@@ -39,12 +39,7 @@ public class ChildAnimationExample implements BaseAnimationInterface {
         View descriptionLayout = view.findViewById(com.daimajia.slider.library.R.id.description_layout);
         if(descriptionLayout!=null){
             view.findViewById(com.daimajia.slider.library.R.id.description_layout).setVisibility(View.VISIBLE);
-//            ValueAnimator animator = ObjectAnimator.ofFloat(
-//                    descriptionLayout, "y", -descriptionLayout.getHeight(),
-//                    0).setDuration(500);
-//            animator.start();
-//            new BounceInAnimator().animate(descriptionLayout);
-            new StandUpAnimator().animate(descriptionLayout);
+            new StandUpAnimator().setTarget(descriptionLayout).animate();
         }
         Log.e(TAG,"onCurrentItemDisappear called");
     }
