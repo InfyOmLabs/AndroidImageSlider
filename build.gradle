@@ -14,7 +14,6 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.3.2'
-        classpath 'com.jakewharton.sdkmanager:gradle-plugin:0.10.+'
     }
 }
 
@@ -24,6 +23,9 @@ allprojects {
         maven {
             url 'https://maven.google.com/'
             name 'Google'
+        }
+        maven {
+            url 'https://maven.google.com'
         }
     }
 }
