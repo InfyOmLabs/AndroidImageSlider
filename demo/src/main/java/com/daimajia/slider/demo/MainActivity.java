@@ -52,7 +52,6 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
             textSliderView
                     .description(name)
                     .image(file_maps.get(name))
-                    .setScaleType(BaseSliderView.ScaleType.Fit)
                     .setOnSliderClickListener(this);
 
             //add your extra information
@@ -62,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
 
            mDemoSlider.addSlider(textSliderView);
         }
-        mDemoSlider.setPresetTransformer(SliderLayout.Transformer.Accordion);
+        mDemoSlider.setPresetTransformer(SliderLayout.Transformer.Default);
         mDemoSlider.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
         mDemoSlider.setCustomAnimation(new DescriptionAnimation());
         mDemoSlider.setDuration(4000);
@@ -106,7 +105,7 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
                 mDemoSlider.setCustomIndicator((PagerIndicator) findViewById(R.id.custom_indicator));
                 break;
             case R.id.action_custom_child_animation:
-                mDemoSlider.setCustomAnimation(new ChildAnimationExample());
+                //mDemoSlider.setCustomAnimation(new ChildAnimationExample());
                 break;
             case R.id.action_restore_default:
                 mDemoSlider.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
